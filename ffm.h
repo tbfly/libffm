@@ -16,16 +16,16 @@ typedef long long ffm_long;
 
 struct ffm_node
 {
-    ffm_int f;
-    ffm_int j;
-    ffm_float v;
+    ffm_int f;      //field
+    ffm_int j;      //index
+    ffm_float v;    //value
 };
 
 struct ffm_problem
 {
-    ffm_int n;
-    ffm_int l;
-    ffm_int m;
+    ffm_int n;      //max index
+    ffm_int l;      //length/line
+    ffm_int m;      //max field
     ffm_node *X;
     ffm_long *P;
     ffm_float *Y;
@@ -33,9 +33,9 @@ struct ffm_problem
 
 struct ffm_model
 {
-    ffm_int n;
-    ffm_int m;
-    ffm_int k;
+    ffm_int n;      //index
+    ffm_int m;      //field
+    ffm_int k;      //k_aligned
     ffm_float *W;
     bool normalization;
 };
